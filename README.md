@@ -1,1 +1,3 @@
-# magic_trick_store
+# README
+
+* First commit, just basic gems to start from
