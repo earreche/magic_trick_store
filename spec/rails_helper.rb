@@ -61,8 +61,16 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
+  # Allows testing of logged in users with Devise
+  config.include Warden::Test::Helpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::Test::ControllerHelpers, type: :helper
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include Shoulda::Matchers::ActiveModel, type: :form
   config.include Shoulda::Matchers::ActiveRecord, type: :form
+  config.include FactoryBot::Syntax::Methods
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!

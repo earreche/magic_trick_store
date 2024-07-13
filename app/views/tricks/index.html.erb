@@ -1,0 +1,6 @@
+<% @tricks.all.each do |trick| %>
+  <div style='border-style: solid'>
+    <p><%= trick.title %></p>
+    <%= trick.trick_category.name %>
+  </div>
+<% end %>

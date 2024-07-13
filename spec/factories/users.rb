@@ -2,9 +2,7 @@
 
 FactoryBot.define do
   factory :user do
-    sequence :email do |n|
-      "admin-#{n}@example.com"
-    end
-    password { Utils::StrongPassword.generate }
+    email { Faker::Internet.email }
+    password { Faker::Alphanumeric.alpha(number: 10) }
   end
 end

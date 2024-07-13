@@ -56,6 +56,9 @@ gem 'uglifier', '~> 4.2'
 # Authentication
 gem 'devise', '~> 4.9.4'
 
+# Administrate
+gem 'administrate'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'annotate', '~> 3.2.0'
